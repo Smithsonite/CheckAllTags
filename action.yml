@@ -1,0 +1,7 @@
+name: 'CheckAllTags'
+description: 'To check to verify that the tags in this repository follow the vd.d.d syntax'
+runs:
+  using: "composite"
+  steps:
+    - run: ./Test-VersionTags.ps1
+      shell: pwsh
