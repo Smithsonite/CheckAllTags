@@ -3,5 +3,7 @@ description: 'To check to verify that the tags in this repository follow the vd.
 runs:
   using: "composite"
   steps:
-    - run: ./Test-VersionTags.ps1
+    - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
+      shell: bash
+    - run: Test-VersionTags.ps1
       shell: pwsh
